@@ -1,28 +1,21 @@
-# Traffic🚦 Signs Classification App
+## Traffic Signs Prediction
 
-[![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/)                 
-[![Python 3.6](https://img.shields.io/badge/python-3.6-blue.svg)](https://www.python.org/downloads/release/python-360/)   
+##### Traffic sign classification is the process of automatically recognizing traffic signs along the road, including speed limit signs, yield signs, merge signs, etc. Being able to automatically recognize traffic signs enables us to build “smarter cars”. Self-driving cars need traffic sign recognition in order to properly parse and understand the roadway. Similarly, “driver alert” systems inside cars need to understand the roadway around them to help aid and protect drivers.Traffic sign recognition is just one of the problems that computer vision and deep learning can solve.
+##### In this I have trained traffic sign classifier/recognizer capable of obtaining over 95% accuracy using Keras and Deep Learning.
 
-## [Follow us on Instagram for Machine Learning Guidelines & Path](https://www.instagram.com/machine_learning_hub.ai/)
-## [Watch Tutorial Videos of these all projects](https://www.youtube.com/c/MachineLearningHub)
-## [Buy Python & ML projects for students at lower rate](https://www.instamojo.com/kushalbhavsar1820)
+##### Flowchart: 
 
-## Usage:-
-
-- Clone my repository.
-- Open CMD in working directory.
-- Run `Traffic_app.py`.
-- Go to the `http://127.0.0.1:5000` and test it. It is a local Flask App.
-- Heroku App is available here:- [Traffic🚦 Signs Classification App](https://traffic-sign-predict.herokuapp.com/)
-
-## Screenshots
-
-<img src="https://github.com/Spidy20/Traffic_Signs_WebApp/blob/master/1.PNG">
-<img src="https://github.com/Spidy20/Traffic_Signs_WebApp/blob/master/2.PNG">
+![image](https://user-images.githubusercontent.com/56456928/142738081-361f462d-c81d-4a9c-acb2-80fd42b344cb.png)
 
 
-## Just follow☝️ me and Star⭐ my repository 
+##### Dataset : We have taken the dataset from German Traffic Sign Benchmark single-image classification challenge held at the International Joint Conference on Neural Networks (IJCNN) 2011 .
+#####  Retrieving the images: We will retrieve the images and their labels. Then resize the images to (30,30) as all images should have same size for recognition. Then convert the images into numpy array.
+##### Building the model : For building the we will use sequential model from keras library. Then we will add the layers to make convolutional neural network. In the first 2 Conv2D layers we have used 32 filters and the kernel size is (5,5). In the MaxPool2D layer we have kept pool size (2,2) which means it will select the maximum value of every 2 x 2 area of the image. By doing this dimensions of the image will reduce by factor of 2. In dropout layer we have kept dropout rate = 0.25 that means 25% of neurons are removed randomly.
 
-# [Buy me a Coffee☕](https://www.buymeacoffee.com/spidy20)
-## [Donate me on PayPal(It will inspire me to do more projects)](https://www.paypal.me/spidy1820)
-## Donate me on GPAY:- kushalbhavsar58-1@okaxis
+##### Input Screenshot:
+
+![image](https://user-images.githubusercontent.com/56456928/142738124-0ee6b075-ec21-4f89-b983-22614eebe4fa.png)
+
+##### Output Screenshot:
+
+![image](https://user-images.githubusercontent.com/56456928/142738130-9d67fa1c-5102-4818-917b-76dee45da3a4.png)
